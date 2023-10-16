@@ -6,6 +6,7 @@ import 'package:two_ears/apis/api.dart';
 import 'package:http/http.dart' as http;
 
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:two_ears/screens/success.dart';
 
 class SignIn extends StatefulWidget {
   @override
@@ -119,22 +120,28 @@ class _SignInState extends State<SignIn> {
                                 children: [
                                   GestureDetector(
                                     onTap: () {
-                                      if (isLoading) {
-                                        return;
-                                      }
-                                      if (_emailController.text.isEmpty ||
-                                          _passwordController.text.isEmpty) {
-                                        scaffoldMessenger.showSnackBar(SnackBar(
-                                            content: Text(
-                                                "Please Fill all fileds")));
-                                        return;
-                                      }
-                                      login(_emailController.text,
-                                          _passwordController.text);
-                                      setState(() {
-                                        isLoading = true;
-                                      });
-                                      //Navigator.pushReplacementNamed(context, "/home");
+                                      // if (isLoading) {
+                                      //   return;
+                                      // }
+                                      // if (_emailController.text.isEmpty ||
+                                      //     _passwordController.text.isEmpty) {
+                                      //   scaffoldMessenger.showSnackBar(SnackBar(
+                                      //       content: Text(
+                                      //           "Please Fill all fileds")));
+                                      //   return;
+                                      // }
+                                      // login(_emailController.text,
+                                      //     _passwordController.text);
+                                      // setState(() {
+                                      //   isLoading = true;
+                                      // });
+                                      // Navigator.pushReplacementNamed(
+                                      //     context, "/home");
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (context) => SuccessPage(),
+                                        ),
+                                      );
                                     },
                                     child: Container(
                                       alignment: Alignment.center,

@@ -100,10 +100,10 @@ packages:
     dependency: "direct main"
     description:
       name: google_fonts
-      sha256: e18dd7a6349a35b8f39198df32aac6837c64b1fbc2ec7500a6277051164ba78e
+      sha256: "6b6f10f0ce3c42f6552d1c70d2c28d764cf22bb487f50f66cca31dcd5194f4d6"
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.0"
+    version: "4.0.4"
   http:
     dependency: "direct dev"
     description:
@@ -439,4 +439,4 @@ packages:
     version: "0.2.0+3"
 sdks:
   dart: ">=3.0.0-0 <3.0.1"
-  flutter: ">=2.8.1"
+  flutter: ">=2.10.0-0"
